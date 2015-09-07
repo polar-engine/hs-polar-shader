@@ -1,6 +1,6 @@
 name:                polar-shader
 version:             0.1.0.0
-synopsis:            High-level shader compiler for Polar
+synopsis:            High-level shader compiler for Polar Game Engine
 description:         A high-level generic shader compiler library built for the Polar Game Engine.
 license:             Apache-2.0
 license-file:        LICENSE
@@ -29,6 +29,6 @@ library
 test-suite test-polar-shader
   type:                exitcode-stdio-1.0
   main-is:             Spec.hs
-  build-depends:       base >=4.8 && <5, containers >=0.5.5, hspec >=2.1, polar
+  build-depends:       base >=4.8 && <5, containers >=0.5.5, hspec >=2.1, polar-shader
   hs-source-dirs:      lib/polar-shader/test
   ghc-options:         -W
