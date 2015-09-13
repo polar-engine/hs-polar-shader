@@ -1,3 +1,4 @@
+{-# LANGUAGE Trustworthy #-}
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}

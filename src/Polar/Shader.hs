@@ -1,3 +1,5 @@
+{-# LANGUAGE Safe #-}
+
 module Polar.Shader where
 
 import Data.List (nub)

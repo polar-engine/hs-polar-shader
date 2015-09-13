@@ -1,3 +1,5 @@
+{-# LANGUAGE Safe #-}
+
 module Polar.Shader.Tokenizer where
 
 import Data.Char (isAlphaNum)
