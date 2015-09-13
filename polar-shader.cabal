@@ -1,5 +1,5 @@
 name:                polar-shader
-version:             0.1.0.1
+version:             0.1.0.2
 synopsis:            High-level shader compiler for Polar Game Engine
 description:         A high-level generic shader compiler library built for the Polar Game Engine.
 license:             Apache-2.0
