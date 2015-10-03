@@ -4,7 +4,7 @@
 module Polar.Shader.Parser where
 
 import qualified Data.Map as M
-import Control.Lens ((^.))
+import Control.Lens.Getter ((^.))
 import Polar.Shader.Types
 
 parse :: [Token] -> Either String (M.Map String Function)

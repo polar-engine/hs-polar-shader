@@ -6,7 +6,8 @@ module Polar.Shader.Processor where
 
 import qualified Data.Map as M
 import Control.Monad.RWS (RWST, tell, get, put, lift)
-import Control.Lens ((^.), view, at)
+import Control.Lens.Getter ((^.), view)
+import Control.Lens.At (at)
 import Polar.Shader.Types
 
 type ProcessorM = RWST CompilerEnv ([(String, DataType)], [(String, DataType)], [(String, DataType)]) ShaderType (Either String)
