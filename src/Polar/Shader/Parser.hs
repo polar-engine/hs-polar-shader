@@ -1,4 +1,4 @@
-{-# LANGUAGE Safe #-}
+{-# LANGUAGE Trustworthy #-}
 {-# LANGUAGE LambdaCase #-}
 
 module Polar.Shader.Parser where
