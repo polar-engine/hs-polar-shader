@@ -39,7 +39,12 @@ data AST = Let String AST
            deriving (Eq, Show)
 
 data ShaderType = ShaderVertex | ShaderPixel
-data DataType = DataFloat | DataFloat2 | DataFloat4 | DataMatrix4x4 deriving (Eq, Show)
+data DataType = DataFloat
+              | DataFloat2
+              | DataFloat3
+              | DataFloat4
+              | DataMatrix4x4
+                deriving (Eq, Show)
 
 data Function = Function
     { _functionName :: String
@@ -62,6 +67,7 @@ class HasComponents a where numComponents :: a -> Either String Int
 instance HasComponents DataType where
     numComponents DataFloat = return 1
     numComponents DataFloat2 = return 2
+    numComponents DataFloat3 = return 3
     numComponents DataFloat4 = return 4
     numComponents DataMatrix4x4 = return 16
 
@@ -99,6 +105,7 @@ astType :: AST -> Either String DataType
 astType ast = numComponents ast >>= \case
     1  -> return DataFloat
     2  -> return DataFloat2
+    3  -> return DataFloat3
     4  -> return DataFloat4
     16 -> return DataMatrix4x4
     x  -> Left ("number of components (" ++ show x ++ ") does not match any supported data type")
