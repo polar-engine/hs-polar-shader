@@ -20,11 +20,7 @@ before_install:
 - travis_retry curl -L https://www.stackage.org/stack/linux-x86_64 | tar xz --wildcards --strip-components=1 -C $HOME/.local/bin '*/stack'
 
 install:
-  - set -ex
   - stack --no-terminal --install-ghc test --bench --only-dependencies
-  - set +ex
 
 script:
-  - set -ex
   - stack --no-terminal test --bench --no-run-benchmarks
-  - set +ex
