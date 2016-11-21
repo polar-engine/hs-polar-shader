@@ -8,8 +8,11 @@ cache:
     - $HOME/.cabal
     - $HOME/.stack
 
-matrix:
-  - addons: {apt: {packages: [libgmp, libgmp-dev]}}
+addons:
+  apt:
+    packages:
+      - libgmp
+      - libgmp-dev
 
 before_install:
 - mkdir -p $HOME/.local/bin
