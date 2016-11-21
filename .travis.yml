@@ -26,5 +26,5 @@ install:
 
 script:
   - set -ex
-  - stack --no-terminal test --bench --no-run-benchmarks --haddock --no-haddock-deps
+  - stack --no-terminal test --bench --no-run-benchmarks
   - set +ex
