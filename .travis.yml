@@ -8,6 +8,9 @@ cache:
     - $HOME/.cabal
     - $HOME/.stack
 
+matrix:
+  - addons: {apt: {packages: [libgmp, libgmp-dev]}}
+
 before_install:
 - mkdir -p $HOME/.local/bin
 - export PATH=$HOME/.local/bin:$PATH
